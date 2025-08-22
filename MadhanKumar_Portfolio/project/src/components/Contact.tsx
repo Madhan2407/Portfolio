@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Download, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin, Github, View } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import Waves from './Waves';
 
@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '#';
+    link.href = 'https://drive.google.com/file/d/1BTBeBWzGgqJoJ6GnMdNFNxlhl4m8N8-K/view?usp=sharing';
     link.download = 'Madhan_Kumar_P_Resume.pdf';
     link.click();
   };
@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
               <div className="pt-6 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex flex-col gap-3 sm:gap-4">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/madhan-kumar-p-759402324/"
                     className="flex items-center justify-center space-x-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors group w-full"
                     aria-label="LinkedIn - Link coming soon"
                   >
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                     <span>LinkedIn</span>
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/Madhan2407"
                     className="flex items-center justify-center space-x-2 px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors group w-full"
                     aria-label="GitHub - Link coming soon"
                   >
@@ -152,8 +152,8 @@ const Contact: React.FC = () => {
                     onClick={handleResumeDownload}
                     className="flex items-center justify-center space-x-2 px-6 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors group w-full"
                   >
-                    <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                    <span>Download Resume</span>
+                    <View className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                    <span>View Resume</span>
                   </button>
                 </div>
               </div>

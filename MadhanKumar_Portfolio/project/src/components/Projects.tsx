@@ -6,6 +6,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
+  detail?: string;
   techTags: string[];
   imageUrl: string;
   demoUrl?: string;
@@ -16,26 +17,35 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'AI-Powered Chatbot',
-    description: 'Voice chatbot with file upload & summarization features.',
-    techTags: ['Python', 'NLP', 'Speech-to-Text', 'Summarization'],
-    imageUrl: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'AI/ML'
+    title: 'E-Commerce Webstore',
+    description: 'Macyx Fashion – A modern, responsive e-commerce web store with sleek UI/UX, product showcase, cart, and search functionality',
+    detail: 'E-Commerce Web Store – Macyx Fashion. A modern, responsive e-commerce platform featuring sleek product showcase, cart management, search functionality, and clean UI/UX for a seamless shopping experience.',
+    techTags: ['Python', 'Html', 'Css', 'Responsive Web Design'],
+    imageUrl: 'https://i.pinimg.com/736x/bc/40/24/bc40249986311b098c25f37db1a1c688.jpg',
+    repoUrl: 'https://github.com/Madhan2407/Ecommerce-store',
+    demoUrl: 'https://github.com/Madhan2407/Ecommerce-store',
+    category: 'Web Development'
   },
   {
     id: 2,
     title: 'Portfolio Website',
     description: 'Responsive portfolio with project showcase.',
+    detail: 'A personal portfolio website showcasing projects, skills, and experience with a modern responsive design, smooth navigation, and clean UI/UX for a professional online presence.',
     techTags: ['React', 'Tailwind', 'Responsive Web Design'],
-    imageUrl: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
+    imageUrl: 'https://i.pinimg.com/736x/a9/3f/08/a93f08415c4d2b1127b5b6780780cf5b.jpg',
+    repoUrl: 'https://github.com/Madhan2407/Portfolio/tree/main/MadhanKumar_Portfolio',
+    demoUrl: 'https://github.com/Madhan2407/Portfolio/tree/main/MadhanKumar_Portfolio',
     category: 'Web Development'
   },
   {
     id: 3,
     title: 'AI Customer Support Bot',
     description: 'Smart chatbot for handling customer queries.',
+    detail: 'An intelligent chatbot powered by AI to handle customer queries, provide instant responses, and improve support efficiency with natural language understanding and 24/7 availability.',
     techTags: ['NLP', 'Chatbot', 'Python'],
     imageUrl: 'https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&w=600',
+    repoUrl: 'https://github.com/Madhan2407/AICHATBOT',
+    demoUrl: 'https://github.com/Madhan2407/AICHATBOT',
     category: 'AI/ML'
   }
 ];
@@ -45,6 +55,7 @@ const Projects: React.FC = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [flippedIds, setFlippedIds] = useState<Set<number>>(new Set());
 
   const allTechTags = Array.from(new Set(projects.flatMap(project => project.techTags)));
   const categories = ['All', ...Array.from(new Set(projects.map(project => project.category)))];
@@ -79,6 +90,24 @@ const Projects: React.FC = () => {
     setSelectedCategory('All');
     setFilteredProjects(projects);
   };
+
+  const toggleFlip = (id: number) => {
+    setFlippedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  const openInNewTab = (url?: string) => {
+    if (!url) return;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
 
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
@@ -161,69 +190,115 @@ const Projects: React.FC = () => {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden animate-fade-in-up"
+                className={`flip-card ${flippedIds.has(project.id) ? 'flipped' : ''} bg-transparent rounded-2xl animate-fade-in-up h-[360px] overflow-hidden`}
                 style={{
                   animationDelay: `${index * 200}ms`
                 }}
               >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <button className="p-2 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors">
-                      <ExternalLink className="w-5 h-5" />
-                    </button>
-                    <button className="p-2 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors">
-                      <Github className="w-5 h-5" />
-                    </button>
+                <div className={`flip-card-inner rounded-2xl shadow-lg hover:shadow-2xl transition-transform duration-300 h-full`}>
+                  {/* Front */}
+                  <div className="flip-card-front bg-white dark:bg-gray-800 rounded-2xl overflow-hidden h-full flex flex-col">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+                        <button onClick={() => openInNewTab(project.demoUrl)} className="p-2 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Open demo">
+                          <ExternalLink className="w-5 h-5" />
+                        </button>
+                        <button onClick={() => openInNewTab(project.repoUrl)} className="p-2 bg-white rounded-full text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Open repository">
+                          <Github className="w-5 h-5" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white line-clamp-1">
+                          {project.title}
+                        </h3>
+                        <span className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs rounded-full flex-shrink-0 ml-2">
+                          {project.category}
+                        </span>
+                      </div>
+
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                        {project.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+                        {project.techTags.map(tag => (
+                          <span
+                            key={tag}
+                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center justify-between mt-auto">
+                        <button onClick={() => toggleFlip(project.id)} className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium text-sm transition-colors">
+                          Project Details
+                        </button>
+                        <div className="flex space-x-2">
+                          <button
+                            onClick={() => openInNewTab(project.demoUrl)}
+                            className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+                            aria-label="View demo"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => openInNewTab(project.repoUrl)}
+                            className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+                            aria-label="View repository"
+                          >
+                            <Github className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white line-clamp-1">
-                      {project.title}
-                    </h3>
-                    <span className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-xs rounded-full flex-shrink-0 ml-2">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                    {project.techTags.map(tag => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <button className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium text-sm transition-colors">
-                      Project Details
-                    </button>
-                    <div className="flex space-x-2">
-                      <button
-                        className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
-                        aria-label="View demo"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
-                      <button
-                        className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
-                        aria-label="View repository"
-                      >
-                        <Github className="w-4 h-4" />
+                  {/* Back */}
+                  <div className="flip-card-back bg-white dark:bg-gray-800 rounded-2xl overflow-hidden p-6 flex flex-col h-full">
+                    <div className="flex-1 overflow-y-auto pr-1">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
+                        {project.detail || project.description}
+                      </p>
+                      <div>
+                        <div className="text-xs font-medium text-gray-700 dark:text-gray-300">Highlights</div>
+                        <div className="flex flex-wrap gap-1 mt-1">
+                          {project.techTags.map(tag => (
+                            <span key={tag} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs rounded-full">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between pt-3">
+                      <div className="flex space-x-2">
+                        {project.demoUrl && (
+                          <button onClick={() => openInNewTab(project.demoUrl)} className="inline-flex items-center space-x-1 px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md text-sm hover:bg-gray-200 dark:hover:bg-gray-600">
+                            <ExternalLink className="w-4 h-4" />
+                            <span>Demo</span>
+                          </button>
+                        )}
+                        {project.repoUrl && (
+                          <button onClick={() => openInNewTab(project.repoUrl)} className="inline-flex items-center space-x-1 px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-md text-sm hover:bg-gray-200 dark:hover:bg-gray-600">
+                            <Github className="w-4 h-4" />
+                            <span>Repo</span>
+                          </button>
+                        )}
+                      </div>
+                      <button onClick={() => toggleFlip(project.id)} className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium text-sm">
+                        Back
                       </button>
                     </div>
                   </div>

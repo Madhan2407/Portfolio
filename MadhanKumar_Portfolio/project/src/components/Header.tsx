@@ -29,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
   const handleResumeDownload = () => {
     // Create a downloadable resume link - in production, this would link to an actual PDF
     const link = document.createElement('a');
-    link.href = '#';
+    link.href = 'https://drive.google.com/file/d/1BTBeBWzGgqJoJ6GnMdNFNxlhl4m8N8-K/view?usp=sharing';
     link.download = 'Madhan_Kumar_P_Resume.pdf';
     link.click();
   };
@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
                 className="flex items-center justify-center space-x-2 px-4 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors w-full mt-4"
               >
                 <Download className="w-4 h-4" />
-                <span className="text-sm font-medium">Download Resume</span>
+                <span className="text-sm font-medium">View Resume</span>
               </button>
             </div>
           </div>
