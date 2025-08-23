@@ -37,24 +37,11 @@ Built with clean design principles, mobile-first responsiveness, and smooth anim
 ## 📬 Contact
 
 - **Email**: your-email@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/madhan-kumar-p-759402324/)
+- **GitHub**: [Your GitHub Profile](https://www.linkedin.com/in/madhan-kumar-p-759402324/)
 
----
-
-### Deployment
-
-To deploy this portfolio on **Bolt.new**:
-1. Open [https://bolt.new](https://bolt.new)
-2. Paste your complete HTML, CSS, and JS files into the editor.
-3. Save and publish the project.
-
-To deploy on **GitHub Pages**:
-1. Push your project to a GitHub repository.
-2. Go to **Settings → Pages**.
-3. Set the branch to `main` and `/root`.
-4. Access your site via the generated GitHub Pages URL.
 
 ---
 
 > 🚀 Designed for showcasing academic achievements, certifications, and professional skills to potential recruiters and collaborators.
+
