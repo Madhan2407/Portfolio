@@ -31,19 +31,19 @@ const certifications = [
 
 const virtualExperiences = [
   {
-    title: 'AWS APAC Solutions Architecture Virtual Experience Program',
+    title: 'AWS APAC Solutions Architecture Virtual Experience Program on Forage',
     provider: 'Forage',
-    date: 'Aug 2025',
-    description: 'Designed a simple, scalable hosting architecture with AWS Elastic Beanstalk for a high-growth client. Created plain-language explanations of architecture and cost calculations for clients.',
-    skills: ['AWS Elastic Beanstalk', 'Architecture Design', 'Cost Optimization'],
+    date: 'August 2025',
+    description: 'Designed a simple and scalable hosting architecture based on Elastic Beanstalk for a client experiencing significant growth and slow response times. Described the proposed architecture in plain language ensuring the client understood how it works and how costs will be calculated.',
+    skills: ['AWS Elastic Beanstalk', 'Architecture Design', 'Cost Optimization', 'Client Communication', 'Scalable Solutions'],
     certificateUrl: 'https://drive.google.com/file/d/1ZHKEYH7itTvgJ5Pc74b129baGvEpJkGV/view?usp=sharing'
   },
   {
-    title: 'Accenture UK Developer & Technology Virtual Experience Programme',
+    title: 'Accenture UK Developer and Technology Virtual Experience Programme on Forage',
     provider: 'Forage',
-    date: 'Aug 2025',
-    description: 'Gained end-to-end SDLC understanding. Researched DevOps and emerging technology trends. Compared Agile vs Waterfall methodologies in a presentation.',
-    skills: ['SDLC', 'DevOps', 'Agile', 'Waterfall', 'Algorithm Design'],
+    date: 'August 2025',
+    description: 'Completed Developer and Technology Job Simulation with end-to-end SDLC understanding. Researched DevOps trends, compared Agile vs Waterfall methodologies, designed algorithms with flow diagrams, and debugged Python code.',
+    skills: ['SDLC', 'DevOps', 'Agile', 'Waterfall', 'Algorithm Design', 'Python Debugging', 'Research & Analysis'],
     certificateUrl: 'https://drive.google.com/file/d/1kO9-0NKIL3aIiZIbwn7YQ7YToRpX8sku/view?usp=sharing'
   },
   {
@@ -69,6 +69,30 @@ const virtualExperiences = [
     description: 'Covered Python basics for software development.',
     skills: ['Python', 'Programming Fundamentals'],
     certificateUrl: 'https://drive.google.com/file/d/1HSHBvHAgTTL-yb-2wbHxcxtTwU0m8-N1/view?usp=sharing'
+  },
+  {
+    title: 'Deloitte Australia Data Analytics Job Simulation on Forage',
+    provider: 'Forage',
+    date: 'August 2025',
+    description: 'Completed a Deloitte job simulation involving data analysis and forensic technology. Created a data dashboard using Tableau. Used Excel to classify data and draw business conclusions.',
+    skills: ['Data Analysis', 'Forensic Technology', 'Tableau', 'Excel', 'Data Classification', 'Business Intelligence'],
+    certificateUrl: 'https://drive.google.com/file/d/11G4rmstRcqg4AI9f4NJL6vGWj3EVB1tK/view?usp=sharing'
+  },
+  {
+    title: 'EC-Council Virtual Experience Program',
+    provider: 'EC-Council',
+    date: '2024',
+    description: 'Participated in cybersecurity-focused virtual experience covering ethical hacking, network security, and information security best practices.',
+    skills: ['Cybersecurity', 'Ethical Hacking', 'Network Security', 'Information Security'],
+    certificateUrl: 'https://drive.google.com/file/d/1LVKnzWAKHy4M3kZDMBoIoKt6wblr3eYC/view?usp=sharing'
+  },
+  {
+    title: 'Google Virtual Experience Program',
+    provider: 'Google',
+    date: '2024',
+    description: 'Explored Google\'s technology ecosystem, cloud services, and digital innovation through hands-on virtual projects and learning modules.',
+    skills: ['Google Cloud', 'Digital Innovation', 'Technology Solutions', 'Cloud Computing'],
+    certificateUrl: 'https://drive.google.com/file/d/1ULRO7VlfKP3xY1nNrTXNzxGXEnH7bdB8/view?usp=sharing'
   }
 ];
 
