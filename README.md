@@ -36,7 +36,7 @@ Built with clean design principles, mobile-first responsiveness, and smooth anim
 
 ## 📬 Contact
 
-- **Email**: your-email@example.com
+- **Email**: madhankumar070406@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/madhan-kumar-p-759402324/)
 - **GitHub**: [Your GitHub Profile](https://www.linkedin.com/in/madhan-kumar-p-759402324/)
 
@@ -44,4 +44,5 @@ Built with clean design principles, mobile-first responsiveness, and smooth anim
 ---
 
 > 🚀 Designed for showcasing academic achievements, certifications, and professional skills to potential recruiters and collaborators.
+
 
