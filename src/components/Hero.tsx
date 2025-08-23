@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
                   <span>LinkedIn</span>
                 </a>
                 <a
-                  href="https://github.com/Madhan2407"
+                  href="https://github.com/Madhan-Tech-AI"
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors group w-full sm:w-auto"
                   aria-label="GitHub - Link coming soon"
                 >
@@ -130,5 +130,6 @@ const Hero: React.FC = () => {
     </section>
   );
 };
+
 
 export default Hero;
