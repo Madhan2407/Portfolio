@@ -33,8 +33,8 @@ const projects: Project[] = [
     detail: 'A personal portfolio website showcasing projects, skills, and experience with a modern responsive design, smooth navigation, and clean UI/UX for a professional online presence.',
     techTags: ['React', 'Tailwind', 'Responsive Web Design'],
     imageUrl: 'https://i.pinimg.com/736x/a9/3f/08/a93f08415c4d2b1127b5b6780780cf5b.jpg',
-    repoUrl: 'http://github.com/Madhan2407/Portfolio',
-    demoUrl: 'http://github.com/Madhan2407/Portfolio',
+    repoUrl: 'https://github.com/Madhan-Tech-AI/Portfolio',
+    demoUrl: 'https://github.com/Madhan-Tech-AI/Portfolio',
     category: 'Web Development'
   },
   {
@@ -334,3 +334,4 @@ const Projects: React.FC = () => {
 
 
 export default Projects;
+
