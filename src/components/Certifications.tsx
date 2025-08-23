@@ -9,15 +9,15 @@ const certifications = [
     type: 'Course Completion',
     date: '2024',
     skills: ['UI/UX Design', 'User Research', 'Prototyping'],
-    certificateUrl: '#'
+    certificateUrl: 'https://drive.google.com/file/d/1UWphdDanx5usL49tRBxHHg57GFCO54ln/view?usp=sharing'
   },
   {
-    title: 'Git & GitHub',
-    provider: 'freeCodeCamp',
+    title: 'Basics of Python',
+    provider: 'Infosys Springboard',
     type: 'Certificate',
     date: '2024',
-    skills: ['Git', 'GitHub', 'Version Control'],
-    certificateUrl: '#'
+      skills: ['Python', 'Programming Fundamentals'],
+    certificateUrl: 'https://drive.google.com/file/d/19qTooIaCICzMZ-TgOzANuJ9gzm0JGskm/view?usp=sharing'
   },
   {
     title: 'Global Startup Club',
@@ -25,7 +25,7 @@ const certifications = [
     type: 'Membership',
     date: 'Active',
     skills: ['Entrepreneurship', 'Networking', 'Business Development'],
-    certificateUrl: '#'
+    
   }
 ];
 
@@ -36,7 +36,7 @@ const virtualExperiences = [
     date: 'Aug 2025',
     description: 'Designed a simple, scalable hosting architecture with AWS Elastic Beanstalk for a high-growth client. Created plain-language explanations of architecture and cost calculations for clients.',
     skills: ['AWS Elastic Beanstalk', 'Architecture Design', 'Cost Optimization'],
-    certificateUrl: '#'
+    certificateUrl: 'https://drive.google.com/file/d/1ZHKEYH7itTvgJ5Pc74b129baGvEpJkGV/view?usp=sharing'
   },
   {
     title: 'Accenture UK Developer & Technology Virtual Experience Programme',
@@ -44,14 +44,14 @@ const virtualExperiences = [
     date: 'Aug 2025',
     description: 'Gained end-to-end SDLC understanding. Researched DevOps and emerging technology trends. Compared Agile vs Waterfall methodologies in a presentation.',
     skills: ['SDLC', 'DevOps', 'Agile', 'Waterfall', 'Algorithm Design'],
-    certificateUrl: '#'
+    certificateUrl: 'https://drive.google.com/file/d/1kO9-0NKIL3aIiZIbwn7YQ7YToRpX8sku/view?usp=sharing'
   },
   {
     title: 'Python 101 for Data Science',
     provider: 'IBM / CognitiveClass.ai',
     date: 'Dec 8, 2024',
     description: 'Learned Python fundamentals for data science applications. Covered data analysis, visualization, and statistical techniques.',
-    certificateUrl: 'https://courses.cognitiveclass.ai/certificates/dce8bf8ba84d4c91902841ab2daf464b',
+    certificateUrl: 'https://drive.google.com/file/d/1mF6e0pu0FJfLqLzsp8O1nTzBWZSEcjLo/view?usp=sharing',
     skills: ['Python', 'Data Science', 'Data Analysis', 'Visualization']
   },
   {
@@ -60,7 +60,7 @@ const virtualExperiences = [
     date: 'Dec 13, 2024',
     description: 'Learned AI applications, ethics, and practical generative AI use cases.',
     skills: ['Computer Ethics', 'Artificial Intelligence', 'Generative AI'],
-    certificateUrl: '#'
+    certificateUrl: 'https://drive.google.com/file/d/1VSUoRCQom55BWz1RXuCVCKkpRjucSZZB/view?usp=sharing'
   },
   {
     title: 'Basics of Python',
@@ -68,7 +68,7 @@ const virtualExperiences = [
     date: 'Oct 14, 2024',
     description: 'Covered Python basics for software development.',
     skills: ['Python', 'Programming Fundamentals'],
-    certificateUrl: '#'
+    certificateUrl: 'https://drive.google.com/file/d/1HSHBvHAgTTL-yb-2wbHxcxtTwU0m8-N1/view?usp=sharing'
   }
 ];
 
