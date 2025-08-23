@@ -22,8 +22,8 @@ const projects: Project[] = [
     detail: 'E-Commerce Web Store – Macyx Fashion. A modern, responsive e-commerce platform featuring sleek product showcase, cart management, search functionality, and clean UI/UX for a seamless shopping experience.',
     techTags: ['Python', 'Html', 'Css', 'Responsive Web Design'],
     imageUrl: 'https://i.pinimg.com/736x/bc/40/24/bc40249986311b098c25f37db1a1c688.jpg',
-    repoUrl: 'https://github.com/Madhan2407/Ecommerce-store',
-    demoUrl: 'https://github.com/Madhan2407/Ecommerce-store',
+    repoUrl: 'https://github.com/Madhan-Tech-AI/Ecommerce-store',
+    demoUrl: 'https://github.com/Madhan-Tech-AI/Ecommerce-store',
     category: 'Web Development'
   },
   {
@@ -334,4 +334,5 @@ const Projects: React.FC = () => {
 
 
 export default Projects;
+
 
