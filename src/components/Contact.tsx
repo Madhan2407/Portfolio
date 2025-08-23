@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                     <span>LinkedIn</span>
                   </a>
                   <a
-                    href="https://github.com/Madhan2407"
+                    href="https://github.com/Madhan-Tech-AI"
                     className="flex items-center justify-center space-x-2 px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors group w-full"
                     aria-label="GitHub - Link coming soon"
                   >
@@ -252,5 +252,6 @@ const Contact: React.FC = () => {
     </section>
   );
 };
+
 
 export default Contact;
